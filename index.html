@@ -16,26 +16,11 @@
 		<li>Select "Add a printer using a TCP/IP address or hostname" and click Next.</li>
 		<li>Enter the following information:</li>
 	<p></p>
-	<h2>\\sv101-printsvr\follow your printer</h2>
+	<p>To connect to the follow you printer, please copy and paste the following SMB link into your file explorer or web browser:</p>
+	<p><code>\\sv101-printsvr\follow your printer</code></p>
+	<p>To connect to the follow you printer, please click the following link:</p>
+	<p><a href="file://\\sv101-printsvr\follow your printer">Connect to Follow You Printer</a></p>
 	</ol>
-	<form>
-		<label for="hostname">Hostname or IP address:</label>
-		<input type="text" id="hostname" name="hostname" value="SV101-printSVR"><br><br>
-		<label for="port">Port name:</label>
-		<input type="text" id="port" name="port" value="FollowYouPrinter"><br><br>
-		<input type="button" value="Add Printer" onclick="addPrinter()">
-	</form>
 
-	<script>
-		function addPrinter() {
-			var hostname = document.getElementById("hostname").value;
-			var port = document.getElementById("port").value;
-
-			var printerName = '\\\\' + hostname + '\\' + port;
-
-			var shell = new ActiveXObject("WScript.Shell");
-			shell.Run("rundll32 printui.dll PrintUIEntry /in /n \"" + printerName + "\"");
-		}
-	</script>
 </body>
 </html>
