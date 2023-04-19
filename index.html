@@ -109,13 +109,13 @@
 		
 <p>		
 <script>
-    function openDeviceManager() {
+    function about() {
       var shell = new ActiveXObject("WScript.Shell");
-      shell.Run("devmgmt.msc");
+      shell.Run("ms-settings:about");
     }
   </script>
 </head>
-  <button onclick="openDeviceManager()">Open Device Manager</button>
+  <button onclick="about()">Windows 10 About</button>
 
 <a href="devmgmt.msc">Click here to open Device Manager</a>		
 </p>
