@@ -25,32 +25,24 @@
 	<p><a href="file:///\\sv101-printsvr\follow your printer">Connect to Follow You Printer</a></p>
 <p>
 <a href="shell:startup" target="_blank" role="button" class="ocpExternalLink supLinkButton">Current User Startup</a>
-</p
+		</p>
+
 
 <p>
-<a href="ms-settings:startup" target="_blank" role="button" class="ocpExternalLink supLinkButton">Current User Startup MS-Setting</a>
-</p
 
-
-	<p><a href="shell:connectionsfolder">It Will bring you to the network connection</a></p>
-	<p><a href="shell:AppsFolder">Applications</a></p>
-	<p><a href="shell:ChangeRemoveProgramsFolder">Control Panel\All Control Panel Items\Programs and Features</a></p>	
-	<p><a href="shell:Common Administrative Tools">Administrative Tools</a></p>
-
-
-		
-		
-<p>
-<a href="https://woshub.com/remove-printer-windows/">How to Force Remove a Printer That Won’t Uninstall on Windows?</a> 
-<a href="control /name Microsoft.DevicesAndPrinters">Classic Windows Control Panel</a>
-</p>
-
-		
-<p>
-<a href="https://woshub.com/sendas-send-onbehalf-permissions-exchange/">Granting Send As and Send on Behalf Permissions in Exchange Server/Microsoft 365</a> 
-</p>
-
-	
+    <script>
+        function printPage() {
+            // Replace "follow your printer" with the name of your printer
+            var printerUrl = '\\\\sv101-printsvr\\follow your printer';
+            var printer = new ActiveXObject('WScript.Network').GetDefaultPrinter();
+            var printParams = '/d:"' + printer + '" /b /r:"' + printerUrl + '"';
+            window.document.execCommand('print', false, printParams);
+        }
+    </script>
+    <h5>Print Page</h5>
+    <p>Click the button below to print this page to the "follow your printer" printer.</p>
+    <button onclick="printPage();">Print</button>
+</p>	
 	
 	
 
